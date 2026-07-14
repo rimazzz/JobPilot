@@ -1,0 +1,57 @@
+{
+  "full_name": "Jordan Rivera",
+  "email": "jordan.rivera@example.com",
+  "phone": "+1-555-0142",
+  "location": "Remote (US)",
+  "headline": "Senior Python Engineer",
+  "summary": "Backend-focused software engineer with 7 years building reliable, well-tested services at scale. Comfortable owning features end to end, from API design to deployment on AWS.",
+  "skills": [
+    "Python", "FastAPI", "Django", "PostgreSQL", "AWS", "Docker",
+    "Kubernetes", "asyncio", "REST APIs", "CI/CD", "pytest", "Redis"
+  ],
+  "experiences": [
+    {
+      "company": "Northstar Payments",
+      "title": "Senior Backend Engineer",
+      "start_date": "2021-03",
+      "end_date": null,
+      "location": "Remote",
+      "highlights": [
+        "Designed and shipped FastAPI microservices handling 2M+ requests/day with p99 < 120ms.",
+        "Led migration from a monolith to containerized services on AWS EKS, cutting deploy time 70%.",
+        "Introduced contract tests and CI gating that reduced production incidents by 40%."
+      ],
+      "technologies": ["Python", "FastAPI", "PostgreSQL", "AWS", "Kubernetes"]
+    },
+    {
+      "company": "Brightwave Analytics",
+      "title": "Software Engineer",
+      "start_date": "2018-06",
+      "end_date": "2021-02",
+      "location": "Austin, TX",
+      "highlights": [
+        "Built ETL pipelines in Python processing 500GB/day into PostgreSQL and Redshift.",
+        "Implemented async job workers with Redis and Celery, improving throughput 3x."
+      ],
+      "technologies": ["Python", "PostgreSQL", "Redis", "Django"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Texas at Austin",
+      "degree": "B.S.",
+      "field_of_study": "Computer Science",
+      "graduation_year": "2018",
+      "details": "Graduated with honors."
+    }
+  ],
+  "links": {
+    "github": "https://github.com/jordan-rivera",
+    "linkedin": "https://linkedin.com/in/jordan-rivera",
+    "portfolio": "https://jordanrivera.dev"
+  },
+  "desired_roles": ["Senior Python Engineer", "Backend Engineer", "Platform Engineer"],
+  "preferred_locations": ["Remote"],
+  "open_to_remote": true,
+  "years_experience": 7
+}

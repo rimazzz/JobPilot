@@ -1,0 +1,24 @@
+# Docker Compose for JobPilot.
+#
+# Compose automatically loads a local `.env` file for ${VAR} interpolation, so
+# copying `.env.example` to `.env` and filling in ANTHROPIC_API_KEY is enough to
+# run against a live model. Without a key, the agents run in heuristic mode.
+services:
+  jobpilot:
+    build: .
+    image: jobpilot:latest
+    container_name: jobpilot
+    ports:
+      - "8000:8000"
+    environment:
+      JOBPILOT_LLM_PROVIDER: ${JOBPILOT_LLM_PROVIDER:-anthropic}
+      JOBPILOT_LLM_MODEL: ${JOBPILOT_LLM_MODEL:-claude-opus-4-8}
+      JOBPILOT_SEARCH_PROVIDER: ${JOBPILOT_SEARCH_PROVIDER:-sample}
+      JOBPILOT_BROWSER_MODE: ${JOBPILOT_BROWSER_MODE:-auto}
+      JOBPILOT_LOG_FORMAT: ${JOBPILOT_LOG_FORMAT:-json}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+    volumes:
+      # Persist generated resumes, cover letters, and form previews.
+      - ./artifacts:/app/artifacts
+    restart: unless-stopped
